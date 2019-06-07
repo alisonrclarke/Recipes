@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Image("fetatart")
+                .resizable(capInsets: .init(), resizingMode: .stretch)
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 400)
+            
+            CircleText()
+                .offset(y: -130)
+                .frame(height: 200)
+                .padding(.bottom, -130)
+                
+            RecipeList()
+                
+            .padding()
+        }
     }
 }
 
